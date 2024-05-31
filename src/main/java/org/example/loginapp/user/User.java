@@ -18,14 +18,16 @@ public class User {
     private String password;
     private String email;
     private String provider ; // facebook , kakao, apple, naver ...  oauth 인증을 위한 필드
+    private String address;
 
 
     @Builder
-    public User(Integer id, String username, String password, String email, String provider) {
+    public User(Integer id, String username, String password, String email, String provider,String address) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.email = email;
         this.provider = provider;
+        this.address = address;
     }
 }
