@@ -176,7 +176,6 @@ public class UserService {
             // 유저네임 : (provider_pk)
             // 비밀번호 : UUID
             // 이메일 : email 받은 값
-            // 프로바이더 : kakao
             User user = User.builder()
                     .username(username)
                     .password(UUID.randomUUID().toString())
