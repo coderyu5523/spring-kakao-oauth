@@ -12,8 +12,16 @@ public class UserController {
     private final UserService userService;
     private final HttpSession session;
 
-    @GetMapping("/oauth/callback")
-    public String callback(String code) {
+    @GetMapping("/oauth/naver/callback")
+    public String naverCallback(String code) {
+        System.out.println("콜백 완료 : " + code);
+        User sessionUser = userService.네이버로그인(code);
+        session.setAttribute("sessionUser", sessionUser);
+        return "redirect:/shop";
+    }
+
+    @GetMapping("/oauth/kakao/callback")
+    public String kakaoCallback(String code) {
 //        System.out.println("콜백 완료 : " + code);
         User sessionUser = userService.카카오로그인(code);
         session.setAttribute("sessionUser", sessionUser);

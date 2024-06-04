@@ -7,6 +7,8 @@ import lombok.Data;
 import java.sql.Timestamp;
 
 public class KakaoResponse {
+
+
     @Data
     public static class TokenDTO{
         @JsonProperty("access_token")
@@ -21,15 +23,6 @@ public class KakaoResponse {
         @JsonProperty("refresh_token_expires_in")
         private Integer refreshTokenExpiresIn;
     }
-
-//    {
-//        "access_token": "cF8KxpGGr_PZ6RQhX6VW7qy9kAcKPhMJAAAAAQo9c-wAAAGPzRoMqcYNwJ_muSR4",
-//        "token_type": "bearer",
-//        "refresh_token": "CkRmjTlcVkiVgvedDVGT7eCd9LK-T0UbAAAAAgo9c-wAAAGPzRoMpsYNwJ_muSR4",
-//        "expires_in": 21599,
-//        "scope": "profile_nickname",
-//        "refresh_token_expires_in": 5183999
-//    }
 
     @Data
     public static class KakaoUserDTO {
